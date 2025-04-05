@@ -8,8 +8,7 @@
         <class>co.edu.javeriana.arqui.rest.entity.Medicamento</class>
         <class>co.edu.javeriana.arqui.rest.entity.Clinica</class>
         <properties>
-            <!-- Propiedades específicas de Hibernate -->
-            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
-            <property name="hibernate.hbm2ddl.auto" value="update"/>    </properties>
+            <property name="jakarta.persistence.schema-generation.database.action" value="create-or-extend-tables"/>
+        </properties>
     </persistence-unit>
 </persistence>

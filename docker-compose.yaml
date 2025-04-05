@@ -17,5 +17,21 @@ services:
       - "8080:8080"
     restart: always
 
+  s-personas:
+    build: ./s-personas
+    ports:
+      - "9081:9081"  # Ajusta según el puerto configurado en server.xml
+    depends_on:
+      - db
+    restart: always
+
+  s-recursos:
+    build: ./s-recursos
+    ports:
+      - "9082:9082"  # Ajusta según el puerto configurado en server.xml
+    depends_on:
+      - db
+    restart: always
+
 volumes:
   pgdata:
